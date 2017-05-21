@@ -1,4 +1,4 @@
-import urllib
+import urllib.request, urllib.parse, urllib.error
 import logging
 from bs4 import BeautifulSoup
 

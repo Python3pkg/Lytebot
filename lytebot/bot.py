@@ -30,7 +30,7 @@ class LyteBot:
         # Disable Telegram API's logger to prevent spam
         self._bot.logger.disabled = True
 
-        for n, f in self.paths.items():
+        for n, f in list(self.paths.items()):
             try:
                 with open(f, 'r') as f:
                     setattr(self, n, yaml.load(f.read()))
